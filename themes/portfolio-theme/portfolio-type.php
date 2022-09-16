@@ -80,7 +80,7 @@ function project_custom_columns($column){
                 echo $custom["projLink"][0];  
                 break;  
             case "type":  
-                echo get_the_term_list($post->ID, 'project-type', '', ', ','');  
+                echo get_the_term_list($post->ID, 'category', '', ', ','');  
                 break;  
         }
 }

@@ -152,6 +152,7 @@ p{
 li, a{
     font-weight: 600;
     font-size: 14px;
+    display: inline-block;
 }
 
 /*--------------------------------------------------------------
@@ -176,15 +177,14 @@ li, a{
     text-transform: uppercase;
     margin: auto;
     display: flex;
-    padding: 0 0 0 10;
+    padding: 10 0 0 10;
 }
 
 .navigation li a{
     font-size: 12px;
     font-weight: 800;
     transition: all 0.3s ease 0s;
-    margin: 3px 0;
-    display: flex;
+    margin: 0 10 0 0;
 }
 
 .navigation a:hover{
@@ -257,6 +257,7 @@ li, a{
 /*------------------------------------------------------------*/
 
 .wrapper .project-container{
+    padding: 0 10 30 10;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -268,11 +269,9 @@ li, a{
     height: 100%;
     position: relative;
     overflow: hidden;
-    z-index: 0;
 }
 
 .wrapper .portfolio-title{
-    z-index: 1;
     position: absolute;
     text-align: center;
     top:90%;
@@ -292,10 +291,12 @@ li, a{
 }
 
 .wrapper .portfolio-item img{
+    position: relative;
     width: 100%;
     height: 100%;
-    z-index: 0;
     object-fit:cover;
+    opacity: 1;
+    z-index: 0;
     -webkit-transition: 1.0s ease;
     -moz-transition: 1.0s ease;
     transition: 1.0s ease;
@@ -307,8 +308,42 @@ li, a{
     transform: scale(1.1);
 }
 
+.wrapper .portfolio-item:hover .portfolio-tag-container{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.wrapper .portfolio-tag-container{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 8;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 89%;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    -webkit-transition: all 0.1s ease-in-out 0s;
+    -moz-transition: all 0.1s ease-in-out 0s;
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.wrapper .portfolio-item-tag{
+    padding-right: 5px;
+}
+
+.wrapper .portfolio-item-tag p {
+    display: inline-block;
+    color: white;
+    background-color: #212121;
+    padding: 8 7 7 7;
+}
+
 .wrapper .portfolio-item:hover .portfolio-title{
-    opacity: 0;;
+    opacity: 0;
 }
 
 .wrapper .portfolio-overlay{
@@ -320,7 +355,6 @@ li, a{
     bottom: 0;
     right: 0;
     opacity: 0;
-    z-index: 1;
     -webkit-transition: all 0.4s ease-in-out 0s;
     -moz-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
@@ -338,7 +372,6 @@ li, a{
 }
 
 .wrapper .portfolio-content{
-    z-index: 2;
     position: absolute;
     text-align: center;
     padding-left: 1em;
@@ -374,18 +407,19 @@ li, a{
 /*------------------------------------------------------------*/
 
 .section-header{
-    align-items: right;
-    text-align: right;
+    align-items: left;
+    width: 65%;
 }
 .section-header h2{
-    padding: 50 0 0 0;
+    padding: 30 0 0 10;
     color: #3775d1;
     text-transform: uppercase;
 }
 
 .section-header p{
     text-transform:none;
-    padding: 2 0 20 0;
+    padding: 10 0 20 10;
+    line-height: 1.4;
 }
 
 .post-title{

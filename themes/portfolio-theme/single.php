@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 /**
  * The template for displaying all single posts
  *
@@ -14,16 +15,23 @@
 
     </div>
 
+    <div class="post-image"><?php the_post_thumbnail(); ?>
+    </div>
+
     <div class="post-title">
         <h2><?php the_title() ?></h2>
     </div>
 
-    <div class="portfolio-item">
+    <?php
 
-        <div class="img"><?php the_post_thumbnail(); ?>
-        </div>
+    $posttags = get_the_tags();
+    if (has_tag()) {
+        foreach ($posttags as $tag) {
+            echo '<p>' . $tag->name . '</p>';
+        }
+    }
 
-    </div>
+    ?>
 
 </div>
 

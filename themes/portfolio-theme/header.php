@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <?php  wp_head(); query_posts('post_type=portfolio&posts_per_page=9'); ?>
+    <?php  wp_head(); query_posts('post_type=portfolio&posts_per_page=50'); ?>
     <script src="https://kit.fontawesome.com/94daaa7835.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <div class="name-header">
-            <img src="http://samstamp.local/wp-content/uploads/2021/06/avatar-icon-images-4-e1622720319675.png"
+            <img src="http://portfolio.local/wp-content/uploads/2022/09/avatar-icon-images-4-e1622720319675-264x300-1.png"
                 alt="Avatar of me">
             <h1> Sam Stamp </h1>
             <div class="social-container">
